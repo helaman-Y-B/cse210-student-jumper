@@ -1,10 +1,9 @@
 import random
 
-
 class Word:
     """A code template for a random word generator. It will responsible for the randomly picking a word 
     from a list or a file.
-
+    
     Stereotype:
         Information Holder
 
@@ -16,7 +15,6 @@ class Word:
     def __init__(self):
         """Class constructor. Declare and initializes instance attributes.
 
-
         Args:
             self (Word): An instance of Word
         """
@@ -26,11 +24,12 @@ class Word:
 
     def random_word(self):
         """Pick random words from the list of words
-
+            
         Args:
             self(Word) : An instance of Word
-
+                
         Return:
             string: A randomly picked word"""
 
         return self.list_words[self.random_number]
+

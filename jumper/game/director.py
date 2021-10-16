@@ -8,7 +8,7 @@ from game.puzzle import Puzzle
 class Director:
     """A code template for a person who directs the game. The responsibility of 
     this class of objects is to control the sequence of play.
-
+    
     Stereotype:
         Controller
 
@@ -34,10 +34,10 @@ class Director:
     def start_game(self):
         """Stats the game loop to control the sequence of play.
 
+        
         Args:
             self (Director): an instance of Director.
-
-        """
+        
         while self.keep_playing:
             self.get_inputs()
             self.do_updates()
@@ -47,13 +47,15 @@ class Director:
         """Get the inputs at the beginning of each round of play. In this case,
         that means asking the guesser for another letter.
 
+        
         Args:
             self (Director): An instance of Director.
         """
-        interface = self.puzzle.showinterface
-        # This one, is subejct for change depends
-        # on the puzzle class. I will get from the
-        # puzzle the name of method that will be
+        interface = self.puzzle.showinterface 
+        #This one, is subejct for change depends 
+        # on the puzzle class. I will get from the 
+        # puzzle the name of method that will be 
+
         # assigned to get the to print the interface
 
         self.console.write(interface)
@@ -72,4 +74,5 @@ class Director:
         #The lives will give an status to puzzle about the lives
         #added a comment
     
+
     

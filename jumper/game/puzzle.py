@@ -81,21 +81,3 @@ class Puzzle:
             
             
             
-        
-        
-        
-
-        
-
-
-starter = Puzzle()
-
-starter.set_word("nicolas")
-print(starter.question())
-for i in starter.interface(4):
-    print(i)
-    
-starter.evaluate("i")
-for i in starter.interface(4):
-    print(i)
-
