@@ -14,8 +14,7 @@ class Word:
 
     def __init__(self):
         """Class constructor. Declare and initializes instance attributes.
-        
-        
+
         Args:
             self (Word): An instance of Word
         """
@@ -33,3 +32,4 @@ class Word:
             string: A randomly picked word"""
 
         return self.list_words[self.random_number]
+
