@@ -58,4 +58,18 @@ class Director:
 
         self.console.write(interface)
         letter = self.console.read_number("Guess a letter[a-z]: ")
-        self.puzzle.letter(letter)  # subject for change
+
+        self.puzzle.letter(letter) #subject for change 
+
+    def do_updates(self):
+        """Updates the important game information for each round of play. In 
+        this case, -------------------- add ------------------.
+
+        Args:
+            self (Director): An instance of Director.
+        """
+
+        #The lives will give an status to puzzle about the lives
+        #added a comment
+    
+    
