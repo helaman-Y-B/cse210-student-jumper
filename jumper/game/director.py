@@ -29,3 +29,15 @@ class Director:
         self.puzzle = Puzzle()
         self.lives = Lives()
         self.word = Word()
+
+    def start_game(self):
+        """Stats the game loop to control the sequence of play.
+        
+        Args:
+            self (Director): an instance of Director.
+        
+        """
+        while self.keep_playing:
+            self.get_inputs()
+            self.do_updates()
+            self.do_outputs()
