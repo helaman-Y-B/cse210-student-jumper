@@ -41,3 +41,19 @@ class Director:
             self.get_inputs()
             self.do_updates()
             self.do_outputs()
+
+    def get_inputs(self):
+        """Get the inputs at the beginning of each round of play. In this case,
+        that means asking the guesser for another letter.
+        
+        Args:
+            self (Director): An instance of Director.
+        """
+        interface = self.puzzle.showinterface 
+        #This one, is subejct for change depends 
+        # on the puzzle class. I will get from the 
+        # puzzle the name of method that will be 
+        # assigned to get the to print the interface
+
+        
+
