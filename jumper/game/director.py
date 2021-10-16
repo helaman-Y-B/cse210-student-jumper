@@ -68,6 +68,6 @@ class Director:
         """
 
         #The lives will give an status to puzzle about the lives
-        
+        #added a comment
     
     
