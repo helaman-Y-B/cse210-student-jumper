@@ -23,12 +23,11 @@ class Lives:
         Args:
             self (Lives): an instance of the class Lives.
             user_guess (Boolean): A Boolean which if it is false, it will remove 1 life of the player."""
-        lives = self.lives
 
         if user_guess == False:
-            lives -= 1
-            return lives
+            self.lives -= 1
+            return self.lives
 
         elif user_guess == True:
-            lives = self.lives
-            return lives
+            self.lives = self.lives
+            return self.lives
