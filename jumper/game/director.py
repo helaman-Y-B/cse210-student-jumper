@@ -1,7 +1,7 @@
 from game.console import Console
 from game.generate_word import Word
 from game.lives import Lives
-from game.player_guesser import Player
+from game.player_guesser import Player_guesser
 from game.puzzle import Puzzle
 
 
@@ -25,10 +25,10 @@ class Director:
         """
 
         self.console = Console()
-        self.guesser = Player()
+        self.guesser = Player_guesser()
         self.keep_playing = True
         self.puzzle = Puzzle()
-        self.lives = Lives()
+        self.live = Lives()
         self.word = Word()
 
     def start_game(self):
@@ -37,11 +37,15 @@ class Director:
         
         Args:
             self (Director): an instance of Director.
+        """
+        word = self.word.random_word()
+        self.puzzle.set_word(word)
         
         while self.keep_playing:
             self.get_inputs()
             self.do_updates()
             self.do_outputs()
+        
 
     def get_inputs(self):
         """Get the inputs at the beginning of each round of play. In this case,
@@ -51,17 +55,13 @@ class Director:
         Args:
             self (Director): An instance of Director.
         """
-        interface = self.puzzle.showinterface 
-        #This one, is subejct for change depends 
-        # on the puzzle class. I will get from the 
-        # puzzle the name of method that will be 
 
-        # assigned to get the to print the interface
-
-        self.console.write(interface)
-        letter = self.console.read_number("Guess a letter[a-z]: ")
-
-        self.puzzle.letter(letter) #subject for change 
+        live = self.live.lives
+        interface = self.puzzle.interface(live)
+        for i in interface:
+            self.console.write(i)
+        letter = self.console.read(self.puzzle.question())
+        self.puzzle.evaluate(letter)
 
     def do_updates(self):
         """Updates the important game information for each round of play. In 
@@ -74,5 +74,7 @@ class Director:
         #The lives will give an status to puzzle about the lives
         #added a comment
     
+    def do_outputs(self):
+        """"""
 
     
