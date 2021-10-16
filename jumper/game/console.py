@@ -9,10 +9,10 @@ class Console:
     """
 
     def read(self, prompt):
-        """Gets text input from the user through the screen.
+        """Gets text input from the user through the Console.
 
         Args: 
-            self (Screen): An instance of Screen.
+            self (Console): An instance of Console.
             prompt (string): The prompt to display to the user.
 
         Returns:
@@ -24,7 +24,7 @@ class Console:
         """Displays the given text on the screen. 
 
         Args: 
-            self (Screen): An instance of Screen.
+            self (Console): An instance of Console.
             text (string): The text to display.
         """
         print(text)
