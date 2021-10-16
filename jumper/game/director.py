@@ -16,3 +16,16 @@ class Director:
         keep_playing (boolean): Whether or not the game can continue.
     """
 
+    def __init__(self):
+        """The class constructor.
+
+        Args:
+            self (Director): an instance of Director
+        """
+
+        self.console = Console()
+        self.guesser = Player()
+        self.keep_playing = True
+        self.puzzle = Puzzle()
+        self.lives = Lives()
+        self.word = Word()
