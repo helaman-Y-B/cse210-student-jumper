@@ -21,12 +21,15 @@ class Word:
         """
 
         self.list_words = ["hello", "world", "jumper", "programming", "game"]
+        self.random_number = random.randint(0, len(self.list_words)-1)
 
-        def random_word(self):
-            """Pick random words from the list of words
+    def random_word(self):
+        """Pick random words from the list of words
             
-            Args:
-                self(Word) : An instance of Word
+        Args:
+            self(Word) : An instance of Word
                 
-            Return:
-                string: A randomly picked word"""
+        Return:
+            string: A randomly picked word"""
+
+        return self.list_words[self.random_number]
