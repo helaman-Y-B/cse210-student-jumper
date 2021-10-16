@@ -55,5 +55,7 @@ class Director:
         # puzzle the name of method that will be 
         # assigned to get the to print the interface
 
-        
-
+        self.console.write(interface)
+        letter = self.console.read_number("Guess a letter[a-z]: ")
+        self.puzzle.letter(letter) #subject for change 
+    
