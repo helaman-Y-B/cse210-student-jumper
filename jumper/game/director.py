@@ -39,7 +39,6 @@ class Director:
             self (Director): an instance of Director.
         """
         word = self.word.random_word()
-        print(word)
         self.puzzle.set_word(word)
         
         while self.keep_playing:
