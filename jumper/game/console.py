@@ -31,5 +31,9 @@ class Console:
         print(text)
 
     def clear(self):
+        """Clear the console screen
+        
+        Args:
+            self (console): An instance of Console."""
         system("cls")
         
