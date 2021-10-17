@@ -62,8 +62,8 @@ class Director:
         for i in interface:
             self.console.write(i)
         letter = self.console.read(self.puzzle.question())
-        evaluation = self.puzzle.evaluate(letter)
-        self.live.lives_counter(evaluation)
+        self.evaluation = self.puzzle.evaluate(letter)
+        self.live.lives_counter(self.evaluation)
 
     def do_updates(self):
         """Updates the value of keep_playing parameter to stop the game when the lenght of list parachute_man is equal to six
@@ -76,6 +76,11 @@ class Director:
             self.keep_playing = False
             for i in self.puzzle.dead_man:
                 self.console.write(i)
+        
+        if self.evaluation:
+            self.console.write("You did a great job!")
+        else:
+            self.console.write("Try Again other letters!")
     
     def end_game_message(self):
         """Display text if the player guess the correct puzzle
