@@ -1,3 +1,4 @@
+from os import system
 class Console:
 
     """
@@ -28,3 +29,7 @@ class Console:
             text (string): The text to display.
         """
         print(text)
+
+    def clear(self):
+        system("clear")
+        

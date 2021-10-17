@@ -39,7 +39,9 @@ class Director:
             self (Director): an instance of Director.
         """
         word = self.word.random_word()
+        print(word)
         self.puzzle.set_word(word)
+        self.lives = self.live.lives
         
         while self.keep_playing:
             self.get_inputs()
@@ -55,26 +57,37 @@ class Director:
         Args:
             self (Director): An instance of Director.
         """
-
-        live = self.live.lives
-        interface = self.puzzle.interface(live)
+        
+        interface = self.puzzle.interface(self.lives)
         for i in interface:
             self.console.write(i)
         letter = self.console.read(self.puzzle.question())
-        self.puzzle.evaluate(letter)
+        evaluation = self.puzzle.evaluate(letter)
+        self.live.lives_counter(evaluation)
 
     def do_updates(self):
-        """Updates the important game information for each round of play. In 
-        this case, -------------------- add ------------------.
+        """Updates the value of keep_playing parameter to stop the game when the lenght of list parachute_man is equal to six
 
         Args:
             self (Director): An instance of Director.
         """
+        self.console.clear()
+        # ~ print(len(self.puzzle.parachute_man))
+        # ~ print(f"The word set in puzzle is: {self.puzzle.word}")
+        if len(self.puzzle.parachute_man) == 7:
+            self.keep_playing = False
+            for i in self.puzzle.dead_man:
+                self.console.write(i)
 
         #The lives will give an status to puzzle about the lives
         #added a comment
     
     def do_outputs(self):
-        """"""
+        
+        
+        
+        if len(self.puzzle.word) == self.puzzle.progress:
+            self.console.write(self.puzzle.survivor_man())
+            self.keep_playing = False
 
     
