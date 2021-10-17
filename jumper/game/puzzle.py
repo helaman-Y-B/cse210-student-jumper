@@ -1,8 +1,4 @@
 from game.lives import Lives
-# ~ will accept rambom words
-# ~ will hide it from the player
-# ~ will evaluate the player entry letter if is true to the ramdom words
-# print guess a letter
 
 class Puzzle:
     
@@ -14,8 +10,6 @@ class Puzzle:
         self.dead_man = ["", "   X", "  /|\ ", "  / \ ", "", "^^^^^^^", ""]
         self.letters = []
         self.progress = 0
-        
-
             
     def set_word(self, word):
         """Sets the word to initialize the game interface.
@@ -33,10 +27,6 @@ class Puzzle:
         Args:
             score: current score.
         """
-        # ~ print(len(self.parachute_man))
-        
-        # ~ if self.intents < lives:
-            # ~ self.parachute_man.pop(1)
     
         data = [self.word_interface, ]
         
@@ -48,8 +38,6 @@ class Puzzle:
         else:
             return data
 
-        
-        
     def question(self):
         """It returns the game's question.
         """
@@ -70,11 +58,7 @@ class Puzzle:
                 if letter in i:
                     cur_index.append(counter)
                 counter +=1
-            # ~ print(f" letters founded {cur_index}")
-             
-            
-                
-            # ~ lister = list(self.word_interface)
+
             for i in cur_index:
                 lister = list(self.word_interface)
                 index = i * 2
@@ -93,7 +77,6 @@ class Puzzle:
         """Returns self.dead_man when the game ends
         
         """
-        
         return self.dead_man
         
     def survivor_man(self):
