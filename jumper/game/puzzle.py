@@ -63,7 +63,7 @@ class Puzzle:
     def evaluate(self, letter):
         """It compares the current letter with the word and sets the new interface.
         Args:
-            letter: current score.
+            letter: this is a letter inputted from the player.
         """
         if letter in self.word and letter not in self.letters:
             
@@ -85,17 +85,24 @@ class Puzzle:
         else:
             self.intents -= 1
             self.parachute_man.pop(1)
-            # ~ print("descontando 1")
             return False
         
     def dead_man(self):
         """Returns self.dead_man when the game ends
         
+        Args: 
+            self (Puzzle): an instance of Puzzle
         """
         return self.dead_man
         
     def survivor_man(self):
-        survivor = "Congratulations, you survived!"
+        """
+        Return a message for the console if the player wins the game!
+
+        Args: 
+            self (Puzzle): an instance of Puzzle
+        """
+        survivor = "Hooray you guess it right!\nCongratulations, you survived!"
         return survivor
             
         
