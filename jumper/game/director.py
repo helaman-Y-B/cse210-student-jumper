@@ -17,7 +17,6 @@ class Director:
         puzzle (Puzzle): An instance of the class of object known as Puzzle
         live (Lives): An instance of the class of object known as Lives. It is reponsible for the lives of the player/guesser
         word (Word): An instance of the class of objet known as Word. Generate random word
-        lives (int): to store the lives of the
     """
 
     def __init__(self):
@@ -30,9 +29,7 @@ class Director:
         self.console = Console()
         self.keep_playing = True
         self.puzzle = Puzzle()
-        self.live = Lives()
         self.word = Word()
-        self.lives = self.live.lives
 
     def start_game(self):
         """Stats the game loop to control the sequence of play.
@@ -63,8 +60,7 @@ class Director:
             self.console.write(i)
         letter = self.console.read(self.puzzle.question())
         self.evaluation = self.puzzle.evaluate(letter)
-        self.live.lives_counter(self.evaluation)
-
+        
     def do_updates(self):
         """Updates the value of keep_playing parameter to stop the game when the lenght of list parachute_man is equal to six
 
