@@ -1,7 +1,6 @@
 from game.console import Console
 from game.generate_word import Word
 from game.lives import Lives
-from game.player_guesser import Player_guesser
 from game.puzzle import Puzzle
 
 
