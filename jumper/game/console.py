@@ -31,5 +31,5 @@ class Console:
         print(text)
 
     def clear(self):
-        system("clear")
+        system("cls")
         
