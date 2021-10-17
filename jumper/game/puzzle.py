@@ -82,7 +82,8 @@ class Puzzle:
                 self.word_interface = "".join(lister)
                 self.letters.append(letter)
                 self.progress += 1
-                self.message_every_move = "You did a great job guessing it"
+            
+            self.message_every_move = "You did a great job guessing it"
             return True
         else:
             self.intents -= 1
