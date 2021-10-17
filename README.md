@@ -29,13 +29,22 @@ The project files and folders are organized as follows:
 
 ```
 root                    (project root folder)
-+-- hunter              (source code for game)
++-- jumper              (source code for game)
   +-- game              (specific game classes)
+    +-- __init__.py     (python package file)
+    +-- console.py      (console class)
+    +-- director.py     (director class/ control)
+    +-- generate_words.py(word class)
+    #NOTE: Copy the path of the wordlist.txt from your computer and change the path location in the generate_words.py. in order to detect the file. 
+    +-- lives.py        (lives class)
+    +-- puzzle.py       (puzzle class)
+    +-- wordlist.txt    (list of words for the generate_words.py) 
+    #NOTE: Copy the path of the wordlist.txt from your computer and change the path location in the generate_words.py. in order to detect the file. 
   +-- __init__.py       (python package file)
   +-- __main__.py       (entry point for program)
 +-- README.md           (general info)
 ```
-
+#NOTE: Copy the path of the wordlist.txt from your computer and change the path location in the generate_words.py. in order to detect the file.
 ## Required Technologies
 
 ---
@@ -45,5 +54,6 @@ root                    (project root folder)
 ## Authors
 
 ---
-
-- TODO: Add your names and emails here
+Nicolas Paredes: par21035@byui.edu
+Helama Barbour: Helamashi@gmail.com
+James Charlie Salva: jamessalvajames@hotmail.com

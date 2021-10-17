@@ -18,8 +18,17 @@ class Word:
         Args:
             self (Word): An instance of Word
         """
+        self.list_words = []
 
-        self.list_words = ["hello", "world", "jumper", "programming", "game"]
+        with open("../wordlist.txt", "rt") as words:
+        
+            for word in words:
+                clean_line = word.strip()
+                if len(clean_line) <=3:
+                    pass
+                else:
+                    self.list_words.append(clean_line)
+
         self.random_number = random.randint(0, len(self.list_words)-1)
 
     def random_word(self):
@@ -32,4 +41,3 @@ class Word:
             string: A randomly picked word"""
 
         return self.list_words[self.random_number]
-
