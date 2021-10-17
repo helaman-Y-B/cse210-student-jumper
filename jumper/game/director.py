@@ -58,7 +58,7 @@ class Director:
             self (Director): An instance of Director.
         """
         
-        interface = self.puzzle.interface(self.lives)
+        interface = self.puzzle.interface()
         for i in interface:
             self.console.write(i)
         letter = self.console.read(self.puzzle.question())

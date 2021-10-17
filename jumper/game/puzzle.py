@@ -1,9 +1,24 @@
 from game.lives import Lives
 
 class Puzzle:
+    """A code template for the puzzle that will be 
+    responsible to will accept random words, will 
+    hide the words from the player and will evaluate 
+    the player entry letter if is true to the ramdom words
+    
+    Attributes:
+        parachute man (list): a container for the parachute man interface
+        intents (int): a number of intents for the player.
+        dead main (list): a container for the parachute man inteface when it is dead
+        letter (list): a container for the letter of a puzzle word.
+        progress (int): for tracking the number of tries and progress of the player.
+    """
     
     def __init__(self):
         """Initialize 
+
+        Args:
+            self (Puzzle): an instance of Puzzle
         """
         self.parachute_man = ["", "  ___", " /___\ ", " \   /", "  \ /", "   0", "  /|\ ", "  / \ ", "", "^^^^^^^", ""]
         self.intents = 4
@@ -22,7 +37,7 @@ class Puzzle:
         for _ in word:
             self.word_interface += "_ "
 
-    def interface(self, lives):
+    def interface(self):
         """It generates the game interface.
         Args:
             score: current score.
