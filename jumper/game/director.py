@@ -76,18 +76,12 @@ class Director:
             self.keep_playing = False
             for i in self.puzzle.dead_man:
                 self.console.write(i)
-        
-        if self.evaluation:
-            self.console.write("You did a great job!")
-        else:
-            self.console.write("Try Again other letters!")
     
     def end_game_message(self):
         """Display text if the player guess the correct puzzle
         Args:
             self (Director): An instance of Director
         """
-        
         if len(self.puzzle.word) == self.puzzle.progress:
             self.console.write(self.puzzle.survivor_man())
             self.keep_playing = False
