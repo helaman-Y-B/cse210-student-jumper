@@ -25,11 +25,11 @@ class Director:
         """
 
         self.console = Console()
-        self.guesser = Player_guesser()
         self.keep_playing = True
         self.puzzle = Puzzle()
         self.live = Lives()
         self.word = Word()
+        self.lives = 0
 
     def start_game(self):
         """Stats the game loop to control the sequence of play.
