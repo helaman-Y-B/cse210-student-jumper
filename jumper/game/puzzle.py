@@ -22,7 +22,7 @@ class Puzzle:
         """
         self.parachute_man = ["", "  ___", " /___\ ", " \   /", "  \ /", "   0", "  /|\ ", "  / \ ", "", "^^^^^^^", ""]
         self.intents = 4
-        self.dead_man = ["", "   X", "  /|\ ", "  / \ ", "", "^^^^^^^", ""]
+        self.dead_man = ["Game over!\nSorry try again next game","", "   X", "  /|\ ", "  / \ ", "", "^^^^^^^", ""]
         self.letters = []
         self.progress = 0
             
