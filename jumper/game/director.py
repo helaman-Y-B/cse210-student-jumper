@@ -52,12 +52,13 @@ class Director:
         Args:
             self (Director): An instance of Director.
         """
-        
+        self.console.write(self.puzzle.message_every_move)
         interface = self.puzzle.interface()
         for i in interface:
             self.console.write(i)
         letter = self.console.read(self.puzzle.question())
         self.evaluation = self.puzzle.evaluate(letter)
+        
         
     def do_updates(self):
         """Updates the value of keep_playing parameter to stop the game when the lenght of list parachute_man is equal to six

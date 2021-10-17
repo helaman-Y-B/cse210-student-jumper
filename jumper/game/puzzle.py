@@ -25,6 +25,7 @@ class Puzzle:
         self.dead_man = ["Game over!\nSorry try again next game","", "   X", "  /|\ ", "  / \ ", "", "^^^^^^^", ""]
         self.letters = []
         self.progress = 0
+        self.message_every_move = ""
             
     def set_word(self, word):
         """Sets the word to initialize the game interface.
@@ -81,10 +82,12 @@ class Puzzle:
                 self.word_interface = "".join(lister)
                 self.letters.append(letter)
                 self.progress += 1
+                self.message_every_move = "You did a great job guessing it"
             return True
         else:
             self.intents -= 1
             self.parachute_man.pop(1)
+            self.message_every_move = "Try again another letter!"
             return False
         
     def dead_man(self):
