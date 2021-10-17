@@ -40,6 +40,7 @@ class Director:
         """
         word = self.word.random_word()
         self.puzzle.set_word(word)
+        print(word)
         
         while self.keep_playing:
             self.do_outputs()
