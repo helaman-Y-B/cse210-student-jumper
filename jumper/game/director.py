@@ -15,6 +15,10 @@ class Director:
     Attributes:
         console (Console): An instance of the class of objects known as Console.
         keep_playing (boolean): Whether or not the game can continue.
+        puzzle (Puzzle): An instance of the class of object known as Puzzle
+        live (Lives): An instance of the class of object known as Lives. It is reponsible for the lives of the player/guesser
+        word (Word): An instance of the class of objet known as Word. Generate random word
+        lives (int): to store the lives of the
     """
 
     def __init__(self):
@@ -29,7 +33,7 @@ class Director:
         self.puzzle = Puzzle()
         self.live = Lives()
         self.word = Word()
-        self.lives = 0
+        self.lives = self.live.lives
 
     def start_game(self):
         """Stats the game loop to control the sequence of play.
@@ -41,7 +45,6 @@ class Director:
         word = self.word.random_word()
         print(word)
         self.puzzle.set_word(word)
-        self.lives = self.live.lives
         
         while self.keep_playing:
             self.get_inputs()
