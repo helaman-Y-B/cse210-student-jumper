@@ -49,14 +49,12 @@ class Director:
         while self.keep_playing:
             self.get_inputs()
             self.do_updates()
-            self.do_outputs()
+            self.end_game_message()
         
-
     def get_inputs(self):
         """Get the inputs at the beginning of each round of play. In this case,
         that means asking the guesser for another letter.
 
-        
         Args:
             self (Director): An instance of Director.
         """
@@ -80,7 +78,11 @@ class Director:
             for i in self.puzzle.dead_man:
                 self.console.write(i)
     
-    def do_outputs(self):
+    def end_game_message(self):
+        """Display text if the player guess the correct puzzle
+        Args:
+            self (Director): An instance of Director
+        """
         
         if len(self.puzzle.word) == self.puzzle.progress:
             self.console.write(self.puzzle.survivor_man())
