@@ -42,13 +42,12 @@ class Director:
         self.puzzle.set_word(word)
         
         while self.keep_playing:
-            self.get_inputs()
+            self.do_outputs()
             self.do_updates()
             self.end_game_message()
         
-    def get_inputs(self):
-        """Get the inputs at the beginning of each round of play. In this case,
-        that means asking the guesser for another letter.
+    def do_outputs(self):
+        """Output the interface and the puzzle word to the console.
 
         Args:
             self (Director): An instance of Director.
