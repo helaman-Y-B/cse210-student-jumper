@@ -72,19 +72,12 @@ class Director:
             self (Director): An instance of Director.
         """
         self.console.clear()
-        # ~ print(len(self.puzzle.parachute_man))
-        # ~ print(f"The word set in puzzle is: {self.puzzle.word}")
         if len(self.puzzle.parachute_man) == 7:
             self.keep_playing = False
             for i in self.puzzle.dead_man:
                 self.console.write(i)
-
-        #The lives will give an status to puzzle about the lives
-        #added a comment
     
     def do_outputs(self):
-        
-        
         
         if len(self.puzzle.word) == self.puzzle.progress:
             self.console.write(self.puzzle.survivor_man())
